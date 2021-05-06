@@ -74,14 +74,7 @@ install_RAPIDS () {
         # install RAPIDS packages
             conda install -y --prefix /usr/local \
               -c rapidsai-nightly -c conda-forge -c nvidia \
-              python=3.7 cudatoolkit=$CTK_VERSION \
-              cudf=$RAPIDS_VERSION \
-              dask-cudf=$RAPIDS_VERSION \
-              cuml=$RAPIDS_VERSION \
-              cugraph=$RAPIDS_VERSION \
-              cusignal=$RAPIDS_VERSION \
-              cugraph=$RAPIDS_VERSION \
-              cuspatial=$RAPIDS_VERSION \
+              rapids=$RAPIDS_VERSION python=3.7 cudatoolkit=$CTK_VERSION \
               xgboost \
               llvmlite gcsfs openssl ujson pandas-gbq
         elif (( $RAPIDS_RESULT == $LOWEST )) ; then
@@ -90,8 +83,7 @@ install_RAPIDS () {
             # install RAPIDS packages
             conda install -y --prefix /usr/local \
                 -c rapidsai -c nvidia -c conda-forge \
-                python=3.7 cudatoolkit=$CTK_VERSION \
-                rapids=$RAPIDS_VERSION \
+                rapids=$RAPIDS_VERSION python=3.7 cudatoolkit=$CTK_VERSION \
                 llvmlite gcsfs openssl
         else  # Stable packages 0.19 uses xgboost 1.3.3
             echo "Installing RAPIDS $RAPIDS_VERSION packages from the stable release channel"
@@ -99,14 +91,7 @@ install_RAPIDS () {
             # install RAPIDS packages
             conda install -y --prefix /usr/local \
                 -c rapidsai -c conda-forge -c nvidia \
-                python=3.7 cudatoolkit=$CTK_VERSION \
-                cudf=$RAPIDS_VERSION \
-                dask-cudf=$RAPIDS_VERSION \
-                cuml=$RAPIDS_VERSION \
-                cugraph=$RAPIDS_VERSION \
-                cusignal=$RAPIDS_VERSION \
-                cugraph=$RAPIDS_VERSION \
-                cuspatial=$RAPIDS_VERSION \
+                rapids=$RAPIDS_VERSION python=3.7 cudatoolkit=$CTK_VERSION \
                 xgboost \
                 llvmlite gcsfs openssl ujson pandas-gbq
         fi
