@@ -82,6 +82,7 @@ install_RAPIDS () {
               cusignal=$RAPIDS_VERSION \
               cugraph=$RAPIDS_VERSION \
               cuspatial=$RAPIDS_VERSION \
+	      cuxfilter=$RAPIDS_VERSION \
               xgboost \
               llvmlite gcsfs openssl ujson pandas-gbq
         elif (( $RAPIDS_RESULT == $LOWEST )) ; then
@@ -107,6 +108,7 @@ install_RAPIDS () {
                 cusignal=$RAPIDS_VERSION \
                 cugraph=$RAPIDS_VERSION \
                 cuspatial=$RAPIDS_VERSION \
+		cuxfilter=$RAPIDS_VERSION \
                 xgboost \
                 llvmlite gcsfs openssl ujson pandas-gbq
         fi
