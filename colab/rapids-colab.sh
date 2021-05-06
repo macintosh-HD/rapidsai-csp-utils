@@ -6,7 +6,7 @@ STABLE=19
 NIGHTLIES=20
 LOWEST=18
 
-CTK_VERSION=11.0
+CTK_VERSION=11.2
 
 RAPIDS_VERSION="0.$STABLE"
 RAPIDS_RESULT=$STABLE
@@ -82,7 +82,6 @@ install_RAPIDS () {
               cusignal=$RAPIDS_VERSION \
               cugraph=$RAPIDS_VERSION \
               cuspatial=$RAPIDS_VERSION \
-	      cuxfilter=$RAPIDS_VERSION \
               xgboost \
               llvmlite gcsfs openssl ujson pandas-gbq
         elif (( $RAPIDS_RESULT == $LOWEST )) ; then

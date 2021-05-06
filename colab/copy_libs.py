@@ -4,7 +4,7 @@ sys.path.append('/usr/local/lib/python3.7/site-packages/')
 os.environ['NUMBAPRO_NVVM'] = '/usr/local/cuda/nvvm/lib64/libnvvm.so'
 os.environ['NUMBAPRO_LIBDEVICE'] = '/usr/local/cuda/nvvm/libdevice/'
 
-for so in ['cudf', 'rmm', 'nccl', 'cuml', 'cugraph', 'xgboost', 'cuspatial']:
+for so in ['cudf', 'rmm', 'nccl', 'cuml', 'cugraph', 'cuxfilter', 'xgboost', 'cuspatial']:
   fn = 'lib'+so+'.so'
   source_fn = '/usr/local/lib/'+fn
   dest_fn = '/usr/lib/'+fn
